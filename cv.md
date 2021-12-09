@@ -82,8 +82,8 @@ export default Icon;
 
 ### Higher education
 
-| :---------- | :---------------------------------------------------------------------------------------------------- |
-| 2014 — 2018 | **University:** MITSO International University <br> **Faculty:** International Economic Relations and Management (IER and M) <br> **Speciality:** Logistician-economist                                                     |
+| :--- | :--- |
+| 2014 — 2018 | **University:** MITSO International University <br> **Faculty:** International Economic Relations and Management (IER and M) <br> **Speciality:** Logistician-economist |
 
 ## 📚 English
 
