@@ -75,10 +75,11 @@ export default Icon;
 
 ### Online learning
 
-| :--- | :---                                                                                            |
-| 2013 | **Bitrix Framework Developer**<br>Ltd "1C-Bitrix"                                               |
-| 2013 | **Basic CSS** <br> NOU "INTUIT"                                                                 |
-| 2010 | **Java Fundamental**<br>Java Fundamental сourses powered by Sun Microsystems <br>DonNTU UNITECH |
+| :--- | :---------------------------------------------------------- |
+| 2021 | **Javascript Marathon** <br> Vladilen Minin                 |
+| 2021 | **learn.javascript.ru** <br> Ilya Kantor                    |
+| 2021 | **CS50** <br> Harvard, Harvard, Fundamentals of Programming |
+| 2021 | **HTML for beginners** <br> Code Basics                     |
 
 ### Higher education
 
