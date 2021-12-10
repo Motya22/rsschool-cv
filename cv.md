@@ -78,7 +78,7 @@ export default Icon;
 | :--- | :---------------------------------------------------------- |
 | 2021 | **Javascript Marathon** <br> Vladilen Minin                 |
 | 2021 | **learn.javascript.ru** <br> Ilya Kantor                    |
-| 2021 | **CS50** <br> Harvard, Harvard, Fundamentals of Programming |
+| 2021 | **CS50** <br> Harvard, Fundamentals of Programming          |
 | 2021 | **HTML for beginners** <br> Code Basics                     |
 
 ### Higher education
