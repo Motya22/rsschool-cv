@@ -75,6 +75,55 @@ body {
   left: 0;
   object-fit: cover;
 }
+/* ARTICLE-BLOCK-------------------------------------------------------------------- */
+.article-block {
+}
+.article-block:not(:last-child) {
+  margin: 0 0 30px;
+}
+.article-block > *:not(:last-child) {
+  margin: 0 0 10px;
+}
+.article-block ul > li:not(:last-child),
+.article-block ol > li:not(:last-child) {
+  margin: 0 0 10px;
+}
+.article-block__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.article-block__subtitle {
+}
+.article-block__years {
+  color: var(--colorGrey);
+}
+.article-block__list {
+}
+.article-block__list a {
+  color: inherit;
+  position: relative;
+}
+.article-block__list a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: var(--colorMain);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transition: all 0.3s ease 0s;
+}
+.article-block__list a:hover::after {
+  left: 0;
+  width: 100%;
+}
+.article-block__text {
+}
+@media (max-width: 767px) {
+  .article-block {
+    text-align: center;
+  }
+}
 /* HEADER-------------------------------------------------------------------- */
 .header {
   padding: 32px 0;
@@ -131,7 +180,35 @@ body {
 .main {
   flex: 1 1 auto;
 }
-
+.main__left {
+}
+.main__left > * {
+  margin: 0 0 30px;
+}
+.main__right {
+}
+.main__right > * {
+  margin: 0 0 30px;
+}
+.main__experience {
+}
+.main__education {
+}
+.main__certificate {}
+.main__certificate img {
+  max-width: 100%;
+}
+@media (min-width: 767px) {
+  .main {
+    display: flex;
+  }
+  .main__left {
+    flex: 1 1 auto;
+  }
+  .main__right {
+    flex: 0 0 300px;
+  }
+}
 /* HEADER-------------------------------------------------------------------- */
 .footer {
   padding: 32px 0;
@@ -162,4 +239,38 @@ body {
   border: 1px solid #fff;
   border-radius: 5px;
   overflow: hidden;
+}
+/* EXPERIENCE-------------------------------------------------------------------- */
+.experience {
+}
+.experience__container {
+}
+.experience__title {
+  text-transform: uppercase;
+  color: var(--colorGrey);
+  letter-spacing: 2px;
+  margin: 0 0 10px;
+}
+.experience__content {
+}
+/* EDUCATION-------------------------------------------------------------------- */
+.education {
+}
+.education__container {
+}
+.education__title {
+  text-transform: uppercase;
+  color: var(--colorGrey);
+  letter-spacing: 2px;
+  margin: 0 0 10px;
+}
+.education__content {
+}
+.article-block {
+}
+.article-block__title {
+}
+.article-block__subtitle {
+}
+.article-block__years {
 }
