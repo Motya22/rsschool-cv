@@ -36,10 +36,10 @@
               </ul>
               <p class="article-block__text">Projects within the framework of teaching at
                 TeachMeSkills:</p>
-              <ol>
-                <li>1. Developed a weather forecast application. In the project I used React, Redux (thunk), i18next, mapbox-gl libraries. Tools such as Proxy-Object, Promise.all Settled, localStorage (when the page is reloaded, the selected temperature unit and language are saved). During the initial upload, the location is determined using the Geolocation API. The weather is displayed for today (updated once an hour) and for the next 3 days. I also deployed the application on a clean Ubuntu server with subsequent manual configuration, domain connection and SSL certificate using the Cloudflare service.</li>
-                <li>2. To-do list application. In the project I used React, Redux, JSONPlaceholder API.</li>
-                <li>3. Adaptive layout of Landing Pages using CSS, jQuery, animation (keyframes and transition).</li>
+              <ol class="article-block__list">
+                <li>1. Developed a weather forecast application. <a href="https://github.com/Motya22/react-weather-app" target="_blank">(link to the source code)</a> In the project I used React, Redux (thunk), i18next, mapbox-gl libraries. Tools such as Proxy-Object, Promise.all Settled, localStorage (when the page is reloaded, the selected temperature unit and language are saved). During the initial upload, the location is determined using the Geolocation API. The weather is displayed for today (updated once an hour) and for the next 3 days. I also deployed the application on a clean Ubuntu server with subsequent manual configuration, domain connection and SSL certificate using the Cloudflare service.</li>
+                <li>2. To-do list application. <a href="https://github.com/Motya22/react-todolist-app" target="_blank">(link to the source code)</a> In the project I used React, Redux, JSONPlaceholder API.</li>
+                <li>3. Adaptive layout of Landing Pages using CSS, jQuery, animation (keyframes and transition). (some links to the source code: <a href="https://github.com/Motya22/Relvise" target="_blank">Relvise</a>, <a href="https://github.com/Motya22/ext-bel" target="_blank">Extbel</a>)</li>
               </ol>
             </article>
             <article class="experience__content article-block">
@@ -76,6 +76,48 @@
               <div class="article-block__subtitle">MITSO International University</div>
               <div class="article-block__years">2014 - 2018, Minsk</div>
             </article>
+          </div>
+        </section>
+        <section class="main__code code">
+          <div class="code__container container">
+            <h2 class="code__title">Code</h2>
+            <br>
+            <figure class="code__highlight">
+              <figcaption>JSX (Icon component with Proxy-object)</figcaption>
+              <pre>
+                <code>
+  import PropTypes from 'prop-types';
+  import { ReactComponent as RefreshBgIcon } from '../../assets/icons/refresh.svg';
+  import { ReactComponent as ThunderstormRainIcon } from '../../assets/icons/weather/tstorm.svg';
+  import { ReactComponent as ThunderstormDrizzleIcon } from '../../assets/icons/weather/tstormdrizzle.svg';
+  import { ReactComponent as DefaultWeatherIcon } from '../../assets/icons/weather/default.svg';
+  
+  let TypeToIconMap = {
+    refreshBg: <RefreshBgIcon />,
+    thunderstormRain: <ThunderstormRainIcon />,
+    thunderstormDrizzle: <ThunderstormDrizzleIcon />,
+  };
+  
+  TypeToIconMap = new Proxy(TypeToIconMap, {
+    get: (target, type) => {
+      if (type in target) {
+        return target[type];
+      }
+  
+      return <DefaultWeatherIcon />;
+    },
+  });
+  
+  const Icon = ({ type }) => TypeToIconMap[type];
+  
+  Icon.propTypes = { type: PropTypes.string };
+  
+  Icon.defaultProps = { type: '' };
+  
+  export default Icon;
+                </code>
+              </pre>
+            </figure>
           </div>
         </section>
       </div>

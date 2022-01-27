@@ -178,6 +178,7 @@ body {
 }
 /* MAIN-------------------------------------------------------------------- */
 .main {
+  margin: 0 auto;
   flex: 1 1 auto;
 }
 .main__left {
@@ -197,6 +198,8 @@ body {
 .main__certificate {}
 .main__certificate img {
   max-width: 100%;
+}
+.main__code {
 }
 @media (min-width: 767px) {
   .main {
@@ -273,4 +276,32 @@ body {
 .article-block__subtitle {
 }
 .article-block__years {
+}
+/* CODE-------------------------------------------------------------------------- */
+.code {
+}
+.code__container {
+}
+.container {
+}
+.code__title {
+  text-transform: uppercase;
+  color: var(--colorGrey);
+  letter-spacing: 2px;
+  margin: 0 0 10px;
+}
+.code__highlight {
+  background-color: #f6f8fa;
+}
+
+pre, code {
+  font-family: monospace, monospace;
+}
+pre {
+  overflow: auto;
+}
+pre > code {
+  display: block;
+  padding: 1rem;
+  word-wrap: normal;
 }
