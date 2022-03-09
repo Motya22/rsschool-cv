@@ -88,4 +88,4 @@ export default Icon;
 
 ## 📚 English
 
-* Elemetary (A1)
+* Pre-intermediate (A2)
