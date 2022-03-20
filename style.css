@@ -2,8 +2,9 @@
 
 /* Colors-------------------------------------------------------------- */
 :root {
-  --colorMain: #101214;
-  --colorGrey: #73808D;
+  --primary-color: #101214;
+  --secondary-color: #73808D;
+  --text-color: #111;
 }
 
 /* -------------------------------------------------------------------- */
@@ -47,7 +48,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: var(--colorMain);
+  color: var(--text-color);
 }
 /* -------------------------------------------------------------------- */
 .wrapper {
@@ -55,6 +56,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  background-color: #fff;
 }
 /* -------------------------------------------------------------------- */
 .container {
@@ -307,6 +309,50 @@ pre > code {
 } */
 
 /* HEADER---------------------------------------------------------------------- */
+.header {
+  padding: 20px 0;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__container > *:not(:last-child) {
+  margin: 0 0 10px;
+}
+.header__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.header__avatar img {
+  max-width: 100%;
+}
+.header__name {
+  font-size: 32px;
+  font-weight: 700;
+}
+.header__name span {
+  color: #fff;
+}
+.header__specialization {
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .header__avatar {
+    width: 120px;
+    height: 120px;
+  }
+  .header__name {
+    font-size: 24px;
+  }
+  .header__specialization {
+    font-size: 16px;
+  }
+}
 
 /* MAIN------------------------------------------------------------------------ */
 .main {
@@ -315,7 +361,7 @@ pre > code {
 
 /* FOOTER---------------------------------------------------------------------- */
 .footer {
-  background-color: var();
+  /* background-color: var(); */
 }
 .footer__container {
   min-height: 100px;
