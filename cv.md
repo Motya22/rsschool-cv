@@ -27,48 +27,30 @@ Objective — starting my career as a Junior Front-End developer.
 * GIT
 
 ## 💾 Example of My Code
-JSX (Icon component with Proxy-object)
-```jsx
-import PropTypes from 'prop-types';
-import { ReactComponent as RefreshBgIcon } from '../../assets/icons/refresh.svg';
-import { ReactComponent as ThunderstormRainIcon } from '../../assets/icons/weather/tstorm.svg';
-import { ReactComponent as ThunderstormDrizzleIcon } from '../../assets/icons/weather/tstormdrizzle.svg';
-import { ReactComponent as FlurriesDayIcon } from '../../assets/icons/weather/flurriesd.svg';
-import { ReactComponent as FlurriesNightIcon } from '../../assets/icons/weather/flurriesn.svg';
-import { ReactComponent as RainIcon } from '../../assets/icons/weather/rain.svg';
-import { ReactComponent as DefaultWeatherIcon } from '../../assets/icons/weather/default.svg';
-
-let TypeToIconMap = {
-  refreshBg: <RefreshBgIcon />,
-  thunderstormRain: <ThunderstormRainIcon />,
-  thunderstormDrizzle: <ThunderstormDrizzleIcon />,
-  flurriesDay: <FlurriesDayIcon />,
-  flurriesNight: <FlurriesNightIcon />,
-  rain: <RainIcon />,
-};
-
-TypeToIconMap = new Proxy(TypeToIconMap, {
-  get: (target, type) => {
-    if (type in target) {
-      return target[type];
+JS (Function check(str, bracketsConfig), that for given brackets sequence will return true if it is correct and false otherwise)
+```js
+const check = (str, bracketsConfig) => {
+  const brackets = str.split('');
+  const arrayLikeStack = [];
+	
+  for (const bracket of brackets) {
+    const lastOfStack = arrayLikeStack[arrayLikeStack.length - 1];
+    const neededPair = bracketsConfig.find((bracketsPair) => bracketsPair[0] === lastOfStack);
+        
+    if (arrayLikeStack.length && neededPair && bracket === neededPair[1]) {
+      arrayLikeStack.pop();
+    } else  {
+      arrayLikeStack.push(bracket);
     }
-
-    return <DefaultWeatherIcon />;
-  },
-});
-
-const Icon = ({ type }) => TypeToIconMap[type];
-
-Icon.propTypes = { type: PropTypes.string };
-
-Icon.defaultProps = { type: '' };
-
-export default Icon;
+  }
+  
+  return arrayLikeStack.length === 0;
+}
 ```
 ## 👨‍💻 Experience
 
 | :--------------------- | :-------------------------------------------------------------------------------------------- |
-| 2021 — 2022 (3 months) | **Front-end Developer (stage#0)** <br> **The Rolling Scopes School** <br> - Development using HTML5 and CSS3 <br> - Development using Vanilla Javascript <br> **Projects within the framework of teaching at The Rolling Scopes School (stage#0):** <br> 1. Developed a CV in two types (Markdown & Git and HTML, CSS & Git Basics). ([code](https://motya22.github.io/rsschool-cv/)) <br> 2. Adaptive Portfolio layout with added functionality. Valid, semantic layout. Interactivity implemented through css. Adaptability is implemented using media queries, css variables, burger menu. From the functionality, the change of images in the portfolio section, the translation of the page into two languages, the ability to switch light and dark themes has been added. ([code](https://rolling-scopes-school.github.io/motya22-JSFEPRESCHOOL/portfolio/)) <br> 3. Developed a custom video player. To create a player whose design meets the requirements, I used JavaScript (an HTMLMediaElement object). ([code](https://rolling-scopes-school.github.io/motya22-JSFEPRESCHOOL/portfolio/#video)) <br> 4. Developed a video search engine. To process asynchronous code, I used Promise & Async/await. I used TMDB as an API. ([code](https://rolling-scopes-school.github.io/motya22-JSFEPRESCHOOL/movie-app/)) <br> 5. Developed the game Whack a Mole. The goal of the game is to score as many points as possible in time. The last ten results are displayed in the table and saved when you restart. ([code](https://rolling-scopes-school.github.io/motya22-JSFEPRESCHOOL/whackamole-game/))                  |
+| 2021 — 2022 (3 months) | **Front-end Developer (stage#0)** <br> **The Rolling Scopes School** <br> - Development using HTML5 and CSS3 <br> - Development using Vanilla Javascript <br> **Projects within the framework of teaching at The Rolling Scopes School (stage#0):** <br> 1. Adaptive Portfolio layout with added functionality. Valid, semantic layout. Interactivity implemented through css. Adaptability is implemented using media queries, css variables, burger menu. From the functionality, the change of images in the portfolio section, the translation of the page into two languages, the ability to switch light and dark themes has been added. ([code](https://rolling-scopes-school.github.io/motya22-JSFEPRESCHOOL/portfolio/)) <br> 2. Developed a custom video player. To create a player whose design meets the requirements, I used JavaScript (an HTMLMediaElement object). ([code](https://rolling-scopes-school.github.io/motya22-JSFEPRESCHOOL/portfolio/#video)) <br> 3. Developed a video search engine. To process asynchronous code, I used Promise & Async/await. I used TMDB as an API. ([code](https://rolling-scopes-school.github.io/motya22-JSFEPRESCHOOL/movie-app/)) <br> 4. Developed the game Whack a Mole. The goal of the game is to score as many points as possible in time. The last ten results are displayed in the table and saved when you restart. ([code](https://rolling-scopes-school.github.io/motya22-JSFEPRESCHOOL/whackamole-game/))                  |
 | 2021 — 2021 (9 months) | **Front-end Developer** <br> **TeachMeSkills** <br> - Development using Javascript <br> - Development of web applications on React <br> **Projects within the framework of teaching at TeachMeSkills:** <br> 1. Developed a weather forecast application. In the project I used React, Redux (thunk), i18next, mapbox-gl libraries. ([code](https://github.com/Motya22/react-weather-app)) <br> 2. To-do list application. In the project I used React, Redux, JSONPlaceholder API. ([code](https://github.com/Motya22/react-todolist-app)) <br> 3. Adaptive layout of Landing Pages using CSS, jQuery, animation (keyframes and transition). ([code](https://github.com/Motya22/ext-bel))                    |
 | 2019 — Present         | **Tender manager** <br> **RPC "HIMMEDSINTEZ"** <br> - Monitoring of ETP <br> - Preparation of a package of documents <br> - Placement of offers on ETP                                                                 |
 | 2018 — 2018 (6 months) | **Purchasing Specialist** <br> **Domashny store chain** <br> - Interaction with suppliers and retail facilities <br> - Drawing up a protocol for drawing up prices, product cards <br> - Working with 1C               |
