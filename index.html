@@ -10,192 +10,6 @@
 </head>
 <body>
   <div class="wrapper">
-    <!-- <header class="header">
-      <div class="header__container container">
-        <div class="header__content">
-          <h1 class="header__title">Matvei Ryzhkov</h1>
-          <p class="header__subtitle">Junior Front-end Developer</p>
-        </div>
-        <div class="header__image ibg">
-          <img src="assets/img/avatarforcv.jpeg" alt="Matvei Ryzhkov avatar">
-        </div>
-      </div>
-    </header> -->
-    <!-- <main class="main">
-      <div class="main__left">
-        <section class="main__experience experience">
-          <div class="experience__container container">
-            <h2 class="experience__title">Experience</h2>
-            <article class="experience__content article-block">
-              <h3 class="article-block__title">Front-end Developer</h3>
-              <div class="article-block__subtitle">TeachMeSkills</div>
-              <div class="article-block__years">Feb 2021 - Oct 2021 - 9 months, Belarus</div>
-              <ul class="article-block__list">
-                <li>- Development using Javascript</li>
-                <li>- Development of web applications on React</li> 
-              </ul>
-              <p class="article-block__text">Projects within the framework of teaching at
-                TeachMeSkills:</p>
-              <ol class="article-block__list">
-                <li>1. Developed a weather forecast application. <a href="https://github.com/Motya22/react-weather-app" target="_blank">(link to the source code)</a> In the project I used React, Redux (thunk), i18next, mapbox-gl libraries. Tools such as Proxy-Object, Promise.all Settled, localStorage (when the page is reloaded, the selected temperature unit and language are saved). During the initial upload, the location is determined using the Geolocation API. The weather is displayed for today (updated once an hour) and for the next 3 days. I also deployed the application on a clean Ubuntu server with subsequent manual configuration, domain connection and SSL certificate using the Cloudflare service.</li>
-                <li>2. To-do list application. <a href="https://github.com/Motya22/react-todolist-app" target="_blank">(link to the source code)</a> In the project I used React, Redux, JSONPlaceholder API.</li>
-                <li>3. Adaptive layout of Landing Pages using CSS, jQuery, animation (keyframes and transition). (some links to the source code: <a href="https://github.com/Motya22/Relvise" target="_blank">Relvise</a>, <a href="https://github.com/Motya22/ext-bel" target="_blank">Extbel</a>)</li>
-              </ol>
-            </article>
-            <article class="experience__content article-block">
-              <h3 class="article-block__title">Tender manager</h3>
-              <div class="article-block__subtitle">CHEMMEDSINTEZ</div>
-              <div class="article-block__years">Dec 2019 - Present, Belarus</div>
-              <ul class="article-block__list">
-                <li>- Monitoring of ETP</li>
-                <li>- Preparation of a package of documents</li>
-                <li>- Placement of offers on ETP</li> 
-              </ul>
-              <p class="article-block__text">In a short period of time, I mastered my duties. Working
-                here, I was responsible, efficient and punctual, thereby
-                improving time management.</p>
-            </article>
-            <article class="experience__content article-block">
-              <h3 class="article-block__title">Purchasing Specialist</h3>
-              <div class="article-block__subtitle">Domashny store chain</div>
-              <div class="article-block__years">Jun 2018 - Nov 2018 - 6 months, Belarus</div>
-              <ul class="article-block__list">
-                <li>- Interaction with suppliers and retail facilities</li>
-                <li>- Drawing up a protocol for drawing up prices, product
-                  cards</li>
-                <li>- Working with 1C</li> 
-              </ul>
-            </article>
-          </div>
-        </section>
-        <section class="main__education education">
-          <div class="education__container container">
-            <h2 class="education__title">Education</h2>
-            <article class="education__content article-block">
-              <h3 class="article-block__title">Logistician-economist</h3>
-              <div class="article-block__subtitle">MITSO International University</div>
-              <div class="article-block__years">2014 - 2018, Minsk</div>
-            </article>
-          </div>
-        </section>
-        <section class="main__code code">
-          <div class="code__container container">
-            <h2 class="code__title">Code</h2>
-            <br>
-            <figure class="code__highlight">
-              <figcaption>JSX (Icon component with Proxy-object)</figcaption>
-              <pre>
-                <code>
-  import PropTypes from 'prop-types';
-  import { ReactComponent as RefreshBgIcon } from '../../assets/icons/refresh.svg';
-  import { ReactComponent as ThunderstormRainIcon } from '../../assets/icons/weather/tstorm.svg';
-  import { ReactComponent as ThunderstormDrizzleIcon } from '../../assets/icons/weather/tstormdrizzle.svg';
-  import { ReactComponent as DefaultWeatherIcon } from '../../assets/icons/weather/default.svg';
-  
-  let TypeToIconMap = {
-    refreshBg: <RefreshBgIcon />,
-    thunderstormRain: <ThunderstormRainIcon />,
-    thunderstormDrizzle: <ThunderstormDrizzleIcon />,
-  };
-  
-  TypeToIconMap = new Proxy(TypeToIconMap, {
-    get: (target, type) => {
-      if (type in target) {
-        return target[type];
-      }
-  
-      return <DefaultWeatherIcon />;
-    },
-  });
-  
-  const Icon = ({ type }) => TypeToIconMap[type];
-  
-  Icon.propTypes = { type: PropTypes.string };
-  
-  Icon.defaultProps = { type: '' };
-  
-  export default Icon;
-                </code>
-              </pre>
-            </figure>
-          </div>
-        </section>
-      </div>
-      <aside class="main__right">
-        <div class="main__contacts contacts">
-          <div class="contacts__container container">
-            <article class="contacts__content article-block">
-              <h3 class="article-block__title">Contacts</h3>
-              <ul class="article-block__list">
-                <li>
-                  <a href="tel:375298597060">Phone: +375298597060 (Telegram, Viber)</a>
-                </li>
-                <li>
-                  <a href="mailto:motya2222@gmail.com">Email: motya2222@gmail.com</a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/matveiryzhkov/" target="_blank">LinkedIn</a>
-                </li>
-                <li>
-                  <a href="https://github.com/Motya22" target="_blank">GitHub</a>
-                </li>
-              </ul>
-            </article>
-          </div>
-        </div>
-        <div class="main__skills skills">
-          <div class="skills__container container">
-            <article class="skills__content article-block">
-              <h3 class="article-block__title">Skills</h3>
-              <ul class="article-block__list">
-                <li>HTML 5, CSS3</li>
-                <li>SASS / SCSS</li>
-                <li>JavaScript</li>
-                <li>React, Redux (thunk), React-Router</li>
-                <li>Node.js</li>
-                <li>Webpack</li>
-                <li>GIT</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-        <div class="main__aboutmyself aboutmyself">
-          <div class="aboutmyself__container container">
-            <article class="aboutmyself__content article-block">
-              <h3 class="article-block__title">About myself</h3>
-              <p>Executive, punctual in solving tasks, disciplined, responsive and purposeful, I work for results.</p>
-              <p>I liked the Front-end because the result of the work is visible immediately, for the growth of logical as well as creative thinking.</p>
-            </article>
-          </div>
-        </div>
-        <div class="main__language language">
-          <div class="language__container container">
-            <article class="language__content article-block">
-              <h3 class="article-block__title">Language</h3>
-              <p>A1 - Elementary</p>
-            </article>
-          </div>
-        </div>
-        <div class="main__certificate certificate">
-          <div class="certificate__container container">
-            <img src="assets/img/certificate.jpg" alt="certificate of completion of the Front-end developer course">
-          </div>
-        </div>
-      </aside>
-    </main> -->
-    <!-- <footer class="footer">
-      <div class="footer__container container">
-        <div class="footer__body">
-          <time datetime="2022-01-01" class="footer__date">@ 2022</time>
-          <a href="https://github.com/Motya22" target="_blank" class="footer__link footer__link_github">Motya22</a>
-        </div>
-        <a href="https://rs.school/js/" target="_blank" class="footer__link footer__link_course">
-          <img src="assets/svg/rs_school_js.svg" alt="RSSchool JS Course">
-        </a>
-      </div>
-    </footer> -->
-
-
     <header class="header">
       <div class="header__container container">
         <div class="header__avatar">
@@ -207,7 +21,177 @@
     </header>
     <main class="main">
       <div class="main__cv cv">
-        MAIN
+        <div class="cv__container container">
+          <div class="cv__left">
+            <section class="cv__section section-cv" id="contacts">
+              <h2 class="section-cv__title">Contacts</h2>
+              <article class="section-cv__card card-cv">
+                <ul class="card-cv__list">
+                  <li>
+                    <a href="tel:375298597060">
+                      <svg>
+                        <use xlink:href="./assets/svg/sprite.svg#phone"></use>
+                      </svg>
+                      +375298597060 (Telegram, Viber)</a>
+                  </li>
+                  <li>
+                    <a href="mailto:motya2222@gmail.com">
+                      <svg>
+                        <use xlink:href="./assets/svg/sprite.svg#email"></use>
+                      </svg>
+                      motya2222@gmail.com</a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/matveiryzhkov/" target="_blank">
+                      <svg>
+                        <use xlink:href="./assets/svg/sprite.svg#linkedin"></use>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Motya22" target="_blank">
+                      <svg>
+                        <use xlink:href="./assets/svg/sprite.svg#github"></use>
+                      </svg>
+                      GitHub
+                    </a>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="cv__section section-cv" id="skills">
+              <h2 class="section-cv__title">Skills</h2>
+              <article class="section-cv__card card-cv">
+                <ul class="card-cv__list">
+                  <li>HTML 5, CSS3</li>
+                  <li>SASS / SCSS</li>
+                  <li>JavaScript</li>
+                  <li>React, Redux (thunk), React-Router</li>
+                  <li>Node.js</li>
+                  <li>Webpack</li>
+                  <li>GIT</li>
+                </ul>
+              </article>
+            </section>
+            <section class="cv__section section-cv" id="about">
+              <h2 class="section-cv__title">About myself</h2>
+              <article class="section-cv__card card-cv">
+                <p class="card-cv__text">Executive, punctual in solving tasks, disciplined, responsive and purposeful, I work for results.</p>
+                <p class="card-cv__text">I liked the Front-end because the result of the work is visible immediately, for the growth of logical as well as creative thinking.</p>
+              </article>
+            </section>
+            <section class="cv__section section-cv" id="languages">
+              <h2 class="section-cv__title">Languages</h2>
+              <article class="section-cv__card card-cv">
+                <p class="card-cv__text">A2 - Pre-intermediate</p>
+              </article>
+            </section>
+            <section class="cv__section section-cv" id="certificates">
+              <h2 class="section-cv__title">Certificates</h2>
+              <article class="section-cv__card card-cv">
+                <img src="assets/img/certificate0.jpg" alt="Certificate of completion of the Front-end developer course (stage#0) from 'The Rolling Scopes School'">
+                <img src="assets/img/certificate1.jpg" alt="Certificate of completion of the Front-end developer course from 'TeachMeSkills'">
+              </article>
+            </section>
+          </div>
+          <div class="cv__right">
+            <section class="cv__section section-cv" id="experience">
+              <h2 class="section-cv__title">Experience</h2>
+              <article class="section-cv__card card-cv">
+                <h3 class="card-cv__title">Front-end Developer (stage 0)</h3>
+                <div class="card-cv__subtitle">The Rolling Scopes School</div>
+                <div class="card-cv__years">Dec 2021 - Mar 2022 - 3 months, Remote</div>
+                <ul class="card-cv__list">
+                  <li>- Development using HTML5 and CSS3</li>
+                  <li>- Development using Core Javascript</li> 
+                </ul>
+                <p class="card-cv__text">Projects within the framework of training at The Rolling Scopes School:</p>
+                <ol class="card-cv__list">
+                  <li>1. Valid, semantic, adaptive layout of the <a href="https://rolling-scopes-school.github.io/motya22-JSFEPRESCHOOL/portfolio/" target="_blank">Portfolio</a> layout with the addition of functionality. Interactivity implemented through css. Adaptability is implemented using media queries, css variables, burger menu. From the functionality, the change of images in the portfolio section, the translation of the page into two languages, the ability to switch light and dark themes has been added.</li>
+                  <li>2. Developed a <a href="https://rolling-scopes-school.github.io/motya22-JSFEPRESCHOOL/portfolio/#video" target="_blank">custom video player</a>. To create a player whose design meets the requirements, I used JavaScript (an HTMLMediaElement object).</li>
+                  <li>3. Developed a <a href="https://rolling-scopes-school.github.io/motya22-JSFEPRESCHOOL/movie-app/" target="_blank">video search engine</a>. To process asynchronous code, I used Promise &
+                    Async/await. I used TMDB as an API.</li>
+                  <li>4. Developed the game <a href="https://rolling-scopes-school.github.io/motya22-JSFEPRESCHOOL/whackamole-game/" target="_blank">Whack a Mole</a>. The goal of the game is to score as many points as possible in time. The last ten results are displayed in the table and saved when you restart.</li>
+                </ol>
+              </article>
+              <article class="section-cv__card card-cv">
+                <h3 class="card-cv__title">Front-end Developer</h3>
+                <div class="card-cv__subtitle">TeachMeSkills</div>
+                <div class="card-cv__years">Feb 2021 - Oct 2021 - 9 months, Belarus</div>
+                <ul class="card-cv__list">
+                  <li>- Development using Javascript</li>
+                  <li>- Development of web applications on React</li>
+                </ul>
+                <p class="card-cv__text">Projects within the framework of training at TeachMeSkills:</p>
+                <ol class="card-cv__list">
+                  <li>1. Developed a <a href="https://github.com/Motya22/react-weather-app" target="_blank">weather forecast application</a>. In the project I used React, Redux (thunk), i18next, mapbox-gl libraries. Tools such as Proxy-Object, Promise.all Settled, localStorage (when the page is reloaded, the selected temperature unit and language are saved). During the initial upload, the location is determined using the Geolocation API. The weather is displayed for today (updated once an hour) and for the next 3 days. I also deployed the application on a clean Ubuntu server with subsequent manual configuration, domain connection and SSL certificate using the Cloudflare service.</li>
+                  <li>2. <a href="https://github.com/Motya22/react-todolist-app" target="_blank">To-do list application</a>. In the project I used React, Redux, JSONPlaceholder API.</li>
+                  <li>3. Adaptive layout of Landing Pages using CSS, jQuery, animation (keyframes and transition). (some links to the source code: <a href="https://github.com/Motya22/Relvise" target="_blank">Relvise</a>, <a href="https://github.com/Motya22/ext-bel" target="_blank">Extbel</a>)</li>
+                </ol>
+              </article>
+              <article class="section-cv__card card-cv">
+                <h3 class="card-cv__title">Tender manager</h3>
+                <div class="card-cv__subtitle">HIMMEDSINTEZ</div>
+                <div class="card-cv__years">Dec 2019 - Present, Belarus</div>
+                <ul class="card-cv__list">
+                  <li>- Monitoring of ETP</li>
+                  <li>- Preparation of a package of documents</li>
+                  <li>- Placement of offers on ETP</li> 
+                </ul>
+                <p class="card-cv__text">In a short period of time, I mastered my duties. Working
+                  here, I was responsible, efficient and punctual, thereby
+                  improving time management.</p>
+              </article>
+              <article class="section-cv__card card-cv">
+                <h3 class="card-cv__title">Purchasing Specialist</h3>
+                <div class="card-cv__subtitle">Domashny store chain</div>
+                <div class="card-cv__years">Jun 2018 - Nov 2018 - 6 months, Belarus</div>
+                <ul class="card-cv__list">
+                  <li>- Interaction with suppliers and retail facilities</li>
+                  <li>- Drawing up a protocol for drawing up prices, product
+                    cards</li>
+                  <li>- Working with 1C</li>  
+                </ul>
+              </article>
+            </section>
+            <section class="cv__section section-cv" id="education">
+              <h2 class="section-cv__title">Education</h2>
+              <article class="section-cv__card card-cv">
+                <h3 class="card-cv__title">Logistician-economist</h3>
+                <div class="card-cv__subtitle">MITSO International University</div>
+                <div class="card-cv__years">2014 - 2018, Minsk</div>
+              </article>
+            </section>
+            <section class="cv__section section-cv" id="code">
+              <h2 class="section-cv__title">Code example</h2>
+            <figure>
+              <figcaption>JS (Function check, that for given brackets sequence will return true if it is correct and false otherwise)</figcaption>
+              <pre>
+                <code>
+const check = (str, bracketsConfig) => {
+  const brackets = str.split('');
+  const arrayLikeStack = [];
+	
+  for (const bracket of brackets) {
+    const lastOfStack = arrayLikeStack[arrayLikeStack.length - 1];
+    const neededPair = bracketsConfig.find((bracketsPair) => bracketsPair[0] === lastOfStack);
+        
+    if (arrayLikeStack.length && neededPair && bracket === neededPair[1]) {
+      arrayLikeStack.pop();
+    } else  {
+      arrayLikeStack.push(bracket);
+    }
+  }
+  
+  return arrayLikeStack.length === 0;
+}
+                </code>
+              </pre>
+            </figure>
+            </section>
+          </div>
+        </div>
       </div>
     </main>
     <footer class="footer">
@@ -217,7 +201,7 @@
           <a href="https://github.com/Motya22" target="_blank" class="footer__link footer__link_github">Motya22</a>
         </div>
         <a href="https://rs.school/js/" target="_blank" class="footer__link footer__link_course">
-          <img src="assets/svg/rs_school_js.svg" alt="RSSchool JS Course">
+          <img src="assets/img/rs_school_js.png" alt="RSSchool JS Course">
         </a>
       </div>
     </footer>
